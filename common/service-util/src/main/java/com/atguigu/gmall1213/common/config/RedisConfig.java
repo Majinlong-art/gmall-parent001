@@ -1,4 +1,4 @@
-package com.atguigu.gmll1213.common.config;
+package com.atguigu.gmall1213.common.config;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
@@ -45,17 +45,20 @@ public class RedisConfig {
         };
     }
 
-    // 声明模板
+    // 声明模板--相对来讲更加灵活去配置过期时间
     @Bean
     public RedisTemplate<Object, Object> redisTemplate(RedisConnectionFactory redisConnectionFactory) {
+       //声明一个redistemplate
         RedisTemplate<Object, Object> redisTemplate = new RedisTemplate<>();
+        //设置连接工厂
         redisTemplate.setConnectionFactory(redisConnectionFactory);
+        //设置序列化
         Jackson2JsonRedisSerializer jackson2JsonRedisSerializer = new Jackson2JsonRedisSerializer(Object.class);
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY);
         objectMapper.enableDefaultTyping(ObjectMapper.DefaultTyping.NON_FINAL);
         jackson2JsonRedisSerializer.setObjectMapper(objectMapper);
-
+        //设置序列化的数据类型
         redisTemplate.setKeySerializer(new StringRedisSerializer());
         redisTemplate.setValueSerializer(jackson2JsonRedisSerializer);
         redisTemplate.setHashKeySerializer(new StringRedisSerializer());

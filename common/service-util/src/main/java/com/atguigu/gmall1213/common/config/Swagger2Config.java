@@ -1,4 +1,4 @@
-package com.atguigu.gmll1213.common.config;
+package com.atguigu.gmall1213.common.config;
 
 import com.google.common.base.Predicates;
 import org.springframework.context.annotation.Bean;

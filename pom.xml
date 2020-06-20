@@ -7,9 +7,14 @@
         <module>common</module>
         <module>model</module>
         <module>service</module>
+        <module>server-gateway</module>
+        <module>service-client</module>
+        <module>web</module>
     </modules>
 
     <!--引入spring boot 父工程-->
+
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -30,7 +35,7 @@
         <gmall.version>1.0</gmall.version>
         <mybatis-plus.version>3.0.5</mybatis-plus.version>
         <mysql.version>5.1.46</mysql.version>
-        <swagger.version>2.7.0</swagger.version>
+        <swagger.version>2.9.2</swagger.version>
         <fastdfs.version>1.27.0.0</fastdfs.version>
         <lombok.version>1.18.10</lombok.version>
     </properties>

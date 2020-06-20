@@ -1,4 +1,4 @@
-package com.atguigu.gmll1213.common.config;
+package com.atguigu.gmall1213.common.config;
 
 import com.baomidou.mybatisplus.core.injector.ISqlInjector;
 import com.baomidou.mybatisplus.extension.injector.LogicSqlInjector;
@@ -16,7 +16,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  */
 @EnableTransactionManagement
 @Configuration
-@MapperScan("com.atguigu.gmall.*.mapper")
+@MapperScan("com.atguigu.gmall1213.*.mapper")
 public class MybatisPlusConfig {
 
     /**

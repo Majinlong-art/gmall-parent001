@@ -1,4 +1,4 @@
-package com.atguigu.gmll1213.common.handler;
+package com.atguigu.gmall1213.common.handler;
 
 import com.atguigu.gmall1213.common.execption.GmallException;
 import com.atguigu.gmall1213.common.result.Result;

@@ -1,4 +1,4 @@
-package com.atguigu.gmll1213.common.config;
+package com.atguigu.gmall1213.common.config;
 
 import lombok.Data;
 import org.redisson.Redisson;

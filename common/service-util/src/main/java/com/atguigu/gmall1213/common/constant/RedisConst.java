@@ -1,4 +1,4 @@
-package com.atguigu.gmll1213.common.constant;
+package com.atguigu.gmall1213.common.constant;
 
 /**
  * Redis常量配置类
@@ -35,4 +35,5 @@ public class RedisConst {
     public static final int SECKILL__TIMEOUT = 60 * 60 * 1;
 
 
+    public static final long SKUKEY_TEMPORARY_TIMEOUT=60*60*1;
 }

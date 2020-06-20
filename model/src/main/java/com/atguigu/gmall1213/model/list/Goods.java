@@ -18,7 +18,7 @@ public class Goods {
 
     @Field(type = FieldType.Keyword, index = false)
     private String defaultImg;
-
+//商品的名称 sku-name
     @Field(type = FieldType.Text, analyzer = "ik_max_word")//中文分词词库
     private String title;
 
@@ -60,6 +60,7 @@ public class Goods {
 
     // 平台属性集合对象
     // Nested 支持嵌套查询
+    //一种特殊的对象 支持独立的检索和查询
     @Field(type = FieldType.Nested)
     private List<SearchAttr> attrs;
 

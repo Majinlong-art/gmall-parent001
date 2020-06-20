@@ -10,6 +10,13 @@
     <modelVersion>4.0.0</modelVersion>
     <!--父工程-->
     <packaging>pom</packaging>
+    <modules>
+        <module>service-product</module>
+        <module>service-item</module>
+        <module>service-list</module>
+    </modules>
+
+
     <artifactId>service</artifactId>
 
     <dependencies>
@@ -68,6 +75,7 @@
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional>
         </dependency>
+
 
         <!--链路追踪-->
         <dependency>

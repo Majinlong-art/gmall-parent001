@@ -19,9 +19,9 @@ import java.util.List;
 @ApiModel(description = "SpuInfo")
 @TableName("spu_info")
 public class SpuInfo extends BaseEntity {
-	
+
 	private static final long serialVersionUID = 1L;
-	
+
 	@ApiModelProperty(value = "商品名称")
 	@TableField("spu_name")
 	private String spuName;
