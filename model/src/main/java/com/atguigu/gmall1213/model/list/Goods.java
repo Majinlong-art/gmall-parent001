@@ -9,6 +9,7 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
 import java.util.Date;
 import java.util.List;
 
+// index = goods, type=info
 @Data
 @Document(indexName = "goods" ,type = "info",shards = 3,replicas = 2)
 public class Goods {
@@ -18,8 +19,9 @@ public class Goods {
 
     @Field(type = FieldType.Keyword, index = false)
     private String defaultImg;
-//商品的名称 sku-name
-    @Field(type = FieldType.Text, analyzer = "ik_max_word")//中文分词词库
+
+    // 商品的名称 sku_name
+    @Field(type = FieldType.Text, analyzer = "ik_max_word")
     private String title;
 
     @Field(type = FieldType.Double)
@@ -60,7 +62,6 @@ public class Goods {
 
     // 平台属性集合对象
     // Nested 支持嵌套查询
-    //一种特殊的对象 支持独立的检索和查询
     @Field(type = FieldType.Nested)
     private List<SearchAttr> attrs;
 
